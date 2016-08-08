@@ -4,4 +4,4 @@ modules yo.
 
 just a sandbox. ignore.
 
-bucklescript is cool too
+[bucklescript](https://github.com/bloomberg/bucklescript) is cool too
