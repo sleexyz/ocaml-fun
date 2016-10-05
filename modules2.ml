@@ -53,11 +53,12 @@ module BinaryCounter = CounterFromNat(BinaryNat)
 (* First-class module method: *)
 let counterFromNatFC (n : (module Nat)) =
   let module N = (val n) in
+  let open N in
   let module M = struct
     type a = N.a
-    let v = ref N.z
-    let incr _ = v := N.s !v
-    let asInt _ = N.toInt !v
+    let v = ref z
+    let incr _ = v := s !v
+    let asInt _ = toInt !v
   end in
   (module M : Counter)
 
